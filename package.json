@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
-    "build": "echo Running build script..."
   },
   "repository": {
     "type": "git",
