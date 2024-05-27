@@ -18,14 +18,14 @@ pipeline {
         }
          stage('SonarQube Analysis') {
              environment {
-                sonar_token = credentials('sonar_token')
+                project_key = credentials('project_key')
             }
             steps {
                bat ''' sonar-scanner.bat 
                 -D"sonar.projectKey=npm_project" 
                 -D"sonar.sources=." 
                 -D"sonar.host.url=http://localhost:9000" ,
-                -D"sonar.token=%sonar_token%
+                -D"sonar.token=%project_key%
                 // -D"sonar.token=sqp_a8ef086bb2cf587626730ea184f91af4534d967d" '''
                    }
                 }
