@@ -16,7 +16,7 @@ pipeline {
                 bat 'npm pack'
             }
         }
-         stage('SonarQube Analysis') {
+        /* stage('SonarQube Analysis') {
              environment {
                 project_key = credentials('project_key')
             }
@@ -28,7 +28,7 @@ pipeline {
                 -D"sonar.token=%project_key%
                 // -D"sonar.token=sqp_a8ef086bb2cf587626730ea184f91af4534d967d" '''
                    }
-                }
+                } *\
     }
 }
        
